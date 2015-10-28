@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';//
 var DeployPluginBase = require('ember-cli-deploy-plugin');
-//var GitHubApi = require('github');
+var GitHubApi = require('./lib/github');
 
 module.exports = {
 
@@ -17,6 +17,7 @@ module.exports = {
       defaultConfig: {
         build: function(/* context */) {
           this.log('hello!!!');
+          this._initGitHubApi();
         }
       },
 
@@ -76,9 +77,19 @@ module.exports = {
         if (hook) {
           return hook.call(this);
         }
+      },
+
+      _initGitHubApi: function() {
+        var github = new GitHubApi();
+
+        github.github.user.show({ user: "jrowlingson" }, function(err, res) {
+          this.log(JSON.stringify(res));
+          this.log(JSON.stringify(err));
+        });
       }
 
     });
+
     return new DeployPlugin();
   }
 };
