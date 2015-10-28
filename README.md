@@ -1,25 +1,57 @@
-# Ember-cli-deploy-github
+# ember-cli-deploy-github
 
-This README outlines the details of collaborating on this Ember addon.
+> An ember-cli-deploy-plugin for GitHub integration
+
+<hr/>
+**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
+<hr/>
+
+<hr/>
+**WARNING: This plugin is a WIP and not ready for consumption yet.
+<hr/>
+
+## What is an ember-cli-deploy plugin?
+
+A plugin is an addon that can be executed as a part of the ember-cli-deploy pipeline. A plugin will implement one or more of the ember-cli-deploy's pipeline hooks.
+
+For more information on what plugins are and how they work, please refer to the [Plugin Documentation][1].
+
+## Quick Start
+To get up and running quickly, do the following:
+
+- Ensure [ember-cli-deploy-build][2] is installed and configured
+
+- Install this plugin
+
+```bash
+$ ember install ember-cli-deploy-github
+```
+
+- Run the pipeline
+
+```bash
+$ ember deploy
+```
 
 ## Installation
+Run the following command in your terminal:
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+ember install ember-cli-deploy-github
+```
 
-## Running
+## Prerequisites
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+The following properties are expected to be present on the deployment `context` object:
+
+- `distDir`   (provided by [ember-cli-deploy-build][2])
+- `distFiles` (provided by [ember-cli-deploy-build][2])
 
 ## Running Tests
 
-* `ember test`
-* `ember test --server`
+- `npm test`
 
-## Building
+[1]: http://ember-cli.github.io/ember-cli-deploy/plugins "Plugin Documentation"
+[2]: https://github.com/ember-cli-deploy/ember-cli-deploy-build "ember-cli-deploy-build"
+[3]: https://github.com/ember-cli/ember-cli-deploy "ember-cli-deploy"
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
