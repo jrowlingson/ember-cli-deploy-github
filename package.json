@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-github",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An ember-cli-deploy-plugin for GitHub integration",
   "directories": {
     "doc": "doc",
