@@ -2,11 +2,9 @@
 
 > An ember-cli-deploy-plugin for GitHub integration
 
-<hr/>
-**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
-<hr/>
+[![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-github.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
 
-<hr/>
+<hr>
 **WARNING: This plugin is a WIP and not ready for consumption yet.
 <hr/>
 
